@@ -15,7 +15,6 @@ def main_menu():
     print("6. Exit")
     print()
 
-# Function for the basic chatbot
 def chatbot():
     print("\nChatbot: Hi! I’m your friendly chatbot. Type 'exit' to leave our chat.")
     while True:
@@ -32,19 +31,18 @@ def chatbot():
         else:
             print("Chatbot: I’m sorry, I didn’t quite get that. Can you rephrase?")
 
-# Function to display date and time
 def show_date_time():
     now = datetime.now()
     print(f"\nThe current date and time is: {now.strftime('%Y-%m-%d %H:%M:%S')}")
 
-# Function for graphing calculator
+
 def graphing_calculator():
     print("\nGraphing Calculator")
     print("Enter a mathematical function of x (e.g., x**2 + 3*x - 5): ")
     func = input("f(x) = ")
-    x = np.linspace(-10, 10, 500)  # Create an array of x values
+    x = np.linspace(-10, 10, 500)  
     try:
-        y = eval(func)  # Evaluate the function
+        y = eval(func)  
         plt.plot(x, y, label=f"f(x) = {func}")
         plt.title("Graph of f(x)")
         plt.xlabel("x")
@@ -57,7 +55,6 @@ def graphing_calculator():
     except Exception as e:
         print(f"Error in graphing: {e}")
 
-# Function to solve equations
 def solve_equation():
     print("\nEquation Solver (up to cubic equations)")
     degree = int(input("Enter the degree of the equation (1, 2, or 3): "))
@@ -86,7 +83,6 @@ def solve_equation():
     solutions = solve(equation, x)
     print(f"The solutions are: {solutions}")
 
-# Function for permutation and combination calculator
 def permutation_combination():
     print("\nPermutation and Combination Calculator")
     print("Choose an option:")
@@ -104,7 +100,6 @@ def permutation_combination():
     else:
         print("Invalid choice. Please select 1 or 2.")
 
-# Main program loop
 def main():
     while True:
         main_menu()
